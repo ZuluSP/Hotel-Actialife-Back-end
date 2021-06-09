@@ -1,0 +1,67 @@
+
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.ctag.hotel</groupId>
+    <artifactId>hotel</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <relativePath>..</relativePath>
+  </parent>
+  <artifactId>hotel-actialife-specs</artifactId>
+  <name>hotel-specs</name>
+  <dependencies>
+    <dependency>
+      <groupId>com.ctag.paperless</groupId>
+      <artifactId>core-utils</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.seedstack.addons.crud</groupId>
+      <artifactId>crud-rest</artifactId>
+    </dependency>
+    <!-- TESTS -->
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-jpamodelgen</artifactId>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+  <build>
+  	<pluginManagement>
+  		<plugins>
+  			<!--This plugin's configuration is used to store Eclipse m2e settings only. It has no influence on the Maven build itself.-->
+  			<plugin>
+  				<groupId>org.eclipse.m2e</groupId>
+  				<artifactId>lifecycle-mapping</artifactId>
+  				<version>1.0.0</version>
+  				<configuration>
+  					<lifecycleMappingMetadata>
+  						<pluginExecutions>
+  							<pluginExecution>
+  								<pluginExecutionFilter>
+  									<groupId>
+  										org.apache.maven.plugins
+  									</groupId>
+  									<artifactId>
+  										maven-compiler-plugin
+  									</artifactId>
+  									<versionRange>
+  										[3.8.1,)
+  									</versionRange>
+  									<goals>
+  										<goal>compile</goal>
+  									</goals>
+  								</pluginExecutionFilter>
+  								<action>
+  									<ignore></ignore>
+  								</action>
+  							</pluginExecution>
+  						</pluginExecutions>
+  					</lifecycleMappingMetadata>
+  				</configuration>
+  			</plugin>
+  		</plugins>
+  	</pluginManagement>
+  </build>
+</project>

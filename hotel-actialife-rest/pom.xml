@@ -1,0 +1,102 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	
+	<parent>
+		<groupId>com.ctag.hotel</groupId>
+		<artifactId>hotel</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+		<relativePath>..</relativePath>
+	</parent>
+	
+	<artifactId>hotel-actialife-rest</artifactId>
+	<name>hotel-rest</name>
+	<dependencies>
+
+		<dependency>
+			<groupId>com.ctag.hotel</groupId>
+			<artifactId>hotel-actialife-core</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.ctag.hotel</groupId>
+			<artifactId>hotel_actialife-swagger-rest</artifactId>
+		</dependency>
+
+		<!-- CORE -->
+		<dependency>
+			<groupId>com.ctag.paperless</groupId>
+			<artifactId>core-web-utils</artifactId>
+		</dependency>
+
+		<!-- Seedstack addons -->
+		<dependency>
+			<groupId>org.seedstack.seed</groupId>
+			<artifactId>seed-rest-jersey2</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.seedstack.addons.modelmapper</groupId>
+			<artifactId>modelmapper</artifactId>
+		</dependency>
+		<!-- APIs -->
+		<dependency>
+			<groupId>javax.transaction</groupId>
+			<artifactId>javax.transaction-api</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<!-- TESTS -->
+		<dependency>
+			<groupId>com.ctag.hotel</groupId>
+			<artifactId>hotel-actialife-test-utils</artifactId>
+			<scope>test</scope>
+		</dependency>
+		
+		<!-- JDBC -->
+		<dependency>
+			<groupId>org.hsqldb</groupId>
+			<artifactId>hsqldb</artifactId>
+			<scope>test</scope>
+		</dependency>
+		
+		<!-- <dependency>
+			<groupId>com.ctag.paperless.psa.ferrage</groupId>
+			<artifactId>psa-fer-test-utils</artifactId>
+			<scope>test</scope>
+			<version>6.0.0</version>
+		</dependency> -->
+		
+		
+		<!-- SeedStack -->
+		<dependency>
+			<groupId>org.seedstack.seed</groupId>
+			<artifactId>seed-web-undertow</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>io.rest-assured</groupId>
+			<artifactId>rest-assured</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.skyscreamer</groupId>
+			<artifactId>jsonassert</artifactId>
+			<scope>test</scope>
+		</dependency>
+		
+		<!-- Persistence -->
+		<dependency>
+			<groupId>org.seedstack.addons.jpa</groupId>
+			<artifactId>jpa</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- END TESTS -->
+
+	</dependencies>
+</project>

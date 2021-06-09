@@ -1,0 +1,73 @@
+application:
+  id: hotel-actialife-test
+  basePackages: [ com.ctag ]
+  version: 0.0.1-SNAPSHOT
+
+runtime:
+  rest:
+    baseUrl: /api
+    baseUrlSlash: /api/
+    
+web:
+  requestDiagnostic: true
+  cors:
+    enabled: true
+    path: /api/*
+    properties:
+      allowOrigin: '*'
+      supportedMethods: GET,PUT,POST,DELETE,PATCH
+      
+rest:
+  path: /api
+  jsonHome: true
+  jerseyProperties: null
+  exceptionMapping:
+    security: true
+    all: true
+    
+jdbc:
+  datasources:
+    actialife-datasource:
+      url: jdbc:hsqldb:mem:hotel;sql.syntax_mys=true;sql.regular_names=true;
+      driver: org.hsqldb.jdbc.JDBCDriver
+      user: SA
+
+jpa:
+# Configured JPA units with the name of the JPA unit as key
+  units:
+    hotel-unit:
+      # The name of the data-source declared in the JDBC add-on to use
+      datasource: actialife-datasource
+      # The fully qualified name of the JPA provider (will be auto-detected if not specified)
+      #provider: org.hibernate.jpa.HibernatePersistanceProvider
+      # The transaction type (local or JTA)
+      transactionType: RESOURCE_LOCAL
+      # Specifies how the provider must use a second-level cache
+      sharedCacheMode: UNSPECIFIED
+      # The validation mode to be used by the provider
+      validationMode: AUTO
+      properties:
+        hibernate.show_sql: false
+        hibernate.format_sql: false
+        hibernate.use_sql_comments: false
+        hibernate.hbm2ddl.auto: none
+        hibernate.dialect: org.hibernate.dialect.MySQL5Dialect
+        hibernate.globally_quoted_identifiers: false
+        hibernate.globally_quoted_identifiers_skip_column_definitions: true
+        hibernate.connection.username: ${jdbc.datasources.actialife-datasource.user}
+        hibernate.connection.password: ${jdbc.datasources.actialife-datasource.password}
+  # The name of the configured unit to use if nothing is specified in the '@JpaUnit' annotation
+  defaultUnit: hotel-unit
+ 
+flyway:
+  datasources:
+    actialife-datasource:
+      enabled: true
+  options:
+    skipDefaultResolvers: false
+    outOfOrder: false
+    baselineDescription: Bare Database
+    encoding: UTF-8
+    placeholderReplacement: true
+    installedBy: paperless-app
+    baselineOnMigrate: true

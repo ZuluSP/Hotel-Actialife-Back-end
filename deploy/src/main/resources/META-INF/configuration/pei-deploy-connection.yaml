@@ -1,0 +1,45 @@
+jdbc:
+# Configured data-sources with the name of the data-source as key
+  datasources:
+    hotel-datasource:
+      # The fully qualified class name of the data-source provider (see below, defaults to 'org.seedstack.jdbc.internal.datasource.PlainDataSourceProvider')
+      provider: org.seedstack.jdbc.internal.datasource.HikariDataSourceProvider
+      # The fully qualified class name of the JDBC driver (automatically detected from url if not specified)
+      driver: com.mysql.cj.jdbc.Driver
+      # The URL of the data-source
+      url: jdbc:mysql://localhost:3306/hotel_actialife?serverTimezone=UTC&useSSL=false
+      user: root
+      password:
+  # TODO: Enable JNDI
+    # When looking up the datasource through JNDI, the name of the data-source.
+    # jndiName: (String)
+    # When looking up the datasource through JNDI, the context to do the lookup (use the default context if not specified)
+    # jndiContext: (String)
+  # The name of the configured data-source to use if nothing is specified in the '@Jdbc' annotation
+  # defaultDatasource: paperless-datasource
+
+jpa:
+# Configured JPA units with the name of the JPA unit as key
+  units:
+    hotel-unit:
+      # The name of the data-source declared in the JDBC add-on to use
+      datasource: hotel-datasource
+      # The fully qualified name of the JPA provider (will be auto-detected if not specified)
+      #provider: org.hibernate.jpa.HibernatePersistanceProvider
+      # The transaction type (local or JTA)
+      transactionType: RESOURCE_LOCAL
+      # Specifies how the provider must use a second-level cache
+      sharedCacheMode: UNSPECIFIED
+      # The validation mode to be used by the provider
+      validationMode: AUTO
+      properties:
+        hibernate.dialect: org.hibernate.dialect.MySQL5Dialect
+        hibernate.show_sql: false
+        hibernate.format_sql: false
+        hibernate.use_sql_comments: false
+        hibernate.hbm2ddl.auto: validate
+        hibernate.proc.param_null_passing: true
+        hibernate.globally_quoted_identifiers: true
+        hibernate.globally_quoted_identifiers_skip_column_definitions: true
+  # The name of the configured unit to use if nothing is specified in the '@JpaUnit' annotation
+  defaultUnit: hotel-unit

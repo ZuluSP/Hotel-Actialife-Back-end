@@ -1,0 +1,42 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.ctag.hotel</groupId>
+    <artifactId>hotel</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <relativePath>..</relativePath>
+  </parent>
+  <artifactId>hotel-actialife-test-utils</artifactId>
+  <name>hotel-test-utils</name>
+  <dependencies>
+    <dependency>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.zaxxer</groupId>
+      <artifactId>HikariCP</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-core</artifactId>
+    </dependency>
+    <!-- Flyway Test in memory -->
+    <dependency>
+      <groupId>com.ctag.paperless</groupId>
+      <artifactId>core-utils-db</artifactId>
+    </dependency>
+    
+   <!-- <dependency>
+      <groupId>com.ctag.paperless</groupId>
+      <artifactId>core-test-utils-db</artifactId>
+    </dependency>  --> 
+    
+    <dependency>
+      <groupId>org.hsqldb</groupId>
+      <artifactId>hsqldb</artifactId>
+    </dependency>
+  </dependencies>
+</project>

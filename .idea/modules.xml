@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/hotel.iml" filepath="$PROJECT_DIR$/hotel.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hotel-actialife-core/hotel-actialife-core.iml" filepath="$PROJECT_DIR$/hotel-actialife-core/hotel-actialife-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hotel-actialife-events/hotel-actialife-events.iml" filepath="$PROJECT_DIR$/hotel-actialife-events/hotel-actialife-events.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hotel-actialife-rest/hotel-actialife-rest.iml" filepath="$PROJECT_DIR$/hotel-actialife-rest/hotel-actialife-rest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hotel-actialife-specs/hotel-actialife-specs.iml" filepath="$PROJECT_DIR$/hotel-actialife-specs/hotel-actialife-specs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hotel-actialife-test-utils/hotel-actialife-test-utils.iml" filepath="$PROJECT_DIR$/hotel-actialife-test-utils/hotel-actialife-test-utils.iml" />
+    </modules>
+  </component>
+</project>

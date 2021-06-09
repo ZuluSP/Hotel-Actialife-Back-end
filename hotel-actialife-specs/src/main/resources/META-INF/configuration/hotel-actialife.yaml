@@ -1,0 +1,15 @@
+classes:
+  com:
+    ctag:
+      jpaUnit: hotel-unit
+      defaultRepository: org.seedstack.jpa.Jpa
+      
+
+com:
+  ctag:
+      hotel:
+        events:
+          Client-Event-Handler: true
+        lifecycle-listener:
+          cleardevicestask:
+            minutes: 10

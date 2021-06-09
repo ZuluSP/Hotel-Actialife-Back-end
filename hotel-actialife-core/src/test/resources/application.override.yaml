@@ -1,0 +1,12 @@
+application:
+  id: hotel-actialife-test
+  basePackages: [ com.ctag ]
+  version: 0.0.1-SNAPSHOT
+
+classes:
+  com:
+    ctag:
+      domain:
+        model:
+        jpaUnit: hotel-unit
+      

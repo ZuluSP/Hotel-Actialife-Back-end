@@ -1,0 +1,10 @@
+ # Put the main configuration in this file
+application:
+  id: hotel-actialife
+  basePackages: [ com.ctag ]
+  version: 0.0.1-SNAPSHOT
+
+logging:
+  level: INFO
+  loggers:
+    com.ctag: DEBUG
